@@ -394,3 +394,126 @@ if ('serviceWorker' in navigator) {
         //     .catch(error => console.log('SW registration failed:', error));
     });
 }
+
+// ===== Chatbot Functionality =====
+const chatbotToggle = document.getElementById('chatbotToggle');
+const chatbot = document.getElementById('chatbot');
+const closeChatbot = document.getElementById('closeChatbot');
+const chatMessages = document.getElementById('chatMessages');
+const chatInput = document.getElementById('chatInput');
+const sendMessage = document.getElementById('sendMessage');
+const quickActions = document.querySelectorAll('.quick-action');
+
+// Toggle chatbot
+chatbotToggle.addEventListener('click', () => {
+    chatbot.classList.toggle('active');
+    const badge = chatbotToggle.querySelector('.chatbot-badge');
+    if (badge && chatbot.classList.contains('active')) {
+        badge.style.display = 'none';
+    }
+});
+
+// Close chatbot
+closeChatbot.addEventListener('click', () => {
+    chatbot.classList.remove('active');
+});
+
+// Send message
+function addMessage(text, isUser = false) {
+    const messageDiv = document.createElement('div');
+    messageDiv.className = `chatbot-message ${isUser ? 'user' : 'bot'}`;
+
+    const time = new Date().toLocaleTimeString('en-US', {
+        hour: 'numeric',
+        minute: '2-digit',
+        hour12: true
+    });
+
+    messageDiv.innerHTML = `
+        <div class="message-avatar">
+            <i class="fas fa-${isUser ? 'user' : 'robot'}"></i>
+        </div>
+        <div class="message-content">
+            <p>${text}</p>
+            <span class="message-time">${time}</span>
+        </div>
+    `;
+
+    chatMessages.appendChild(messageDiv);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+}
+
+// Handle send message
+sendMessage.addEventListener('click', sendUserMessage);
+chatInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+        sendUserMessage();
+    }
+});
+
+function sendUserMessage() {
+    const message = chatInput.value.trim();
+    if (message) {
+        addMessage(message, true);
+        chatInput.value = '';
+
+        // Simulate bot response
+        setTimeout(() => {
+            const response = getBotResponse(message);
+            addMessage(response);
+        }, 600);
+    }
+}
+
+// Bot responses
+function getBotResponse(message) {
+    const msg = message.toLowerCase();
+
+    if (msg.includes('resume') || msg.includes('cv')) {
+        return "You can download Mahidhar's resume by clicking the 'Download Resume' button in the hero section or using the quick action below!";
+    } else if (msg.includes('contact') || msg.includes('email') || msg.includes('reach')) {
+        return "You can reach Mahidhar at damodhar.m@quadranttechnologies.com or call +1 (203) 832 9939. Check the contact section for more details!";
+    } else if (msg.includes('skill') || msg.includes('tech') || msg.includes('experience')) {
+        return "Mahidhar specializes in Azure Databricks, PySpark, Delta Lake, Azure Data Factory, and building scalable ETL pipelines. Check out the Skills section for the complete list!";
+    } else if (msg.includes('project')) {
+        return "Mahidhar has worked on several impressive projects including Wine Quality Prediction on AWS, ETL pipelines with dbt, and Real-Time Supply Chain Analytics. Scroll to the Projects section to learn more!";
+    } else if (msg.includes('education') || msg.includes('degree')) {
+        return "Mahidhar holds a Master of Science in Computer Science from New Jersey Institute of Technology (2023-2024) and a B.Tech in Information Technology from SRKR Engineering College.";
+    } else if (msg.includes('certification') || msg.includes('certified')) {
+        return "Mahidhar is Microsoft Fabric Data Engineer Associate (DP-700) and Databricks Data Engineer Professional certified!";
+    } else if (msg.includes('linkedin')) {
+        return "Connect with Mahidhar on LinkedIn: <a href='https://www.linkedin.com/in/mahidhar-tanniru-5a9091141' target='_blank' style='color: var(--primary-color)'>Mahidhar Tanniru</a>";
+    } else if (msg.includes('github')) {
+        return "Check out Mahidhar's code on GitHub: <a href='https://github.com/Mahidhar-Tanniru' target='_blank' style='color: var(--primary-color)'>github.com/Mahidhar-Tanniru</a>";
+    } else if (msg.includes('hello') || msg.includes('hi') || msg.includes('hey')) {
+        return "Hello! I'm here to help you learn more about Mahidhar's experience and skills. What would you like to know?";
+    } else if (msg.includes('thanks') || msg.includes('thank you')) {
+        return "You're welcome! Feel free to ask if you have any other questions about Mahidhar's portfolio.";
+    } else {
+        return "I can help you with information about Mahidhar's skills, experience, projects, education, or contact details. What would you like to know?";
+    }
+}
+
+// Quick actions
+quickActions.forEach(action => {
+    action.addEventListener('click', () => {
+        const actionType = action.dataset.action;
+
+        if (actionType === 'resume') {
+            addMessage("Can I get the resume?", true);
+            setTimeout(() => {
+                addMessage("Sure! Click here to download: <a href='assets/Mahidhar_Tanniru_Resume.pdf' download style='color: var(--primary-color); text-decoration: underline;'>Download Resume</a>");
+            }, 600);
+        } else if (actionType === 'contact') {
+            addMessage("How can I contact Mahidhar?", true);
+            setTimeout(() => {
+                addMessage("📧 Email: damodhar.m@quadranttechnologies.com<br>📱 Phone: +1 (203) 832 9939<br>🔗 LinkedIn: <a href='https://www.linkedin.com/in/mahidhar-tanniru-5a9091141' target='_blank' style='color: var(--primary-color)'>Connect</a>");
+            }, 600);
+        } else if (actionType === 'skills') {
+            addMessage("What are Mahidhar's core skills?", true);
+            setTimeout(() => {
+                addMessage("🚀 Core Skills:<br>• Azure Databricks & PySpark<br>• Delta Lake & Medallion Architecture<br>• Azure Data Factory<br>• Spark SQL & ETL Pipelines<br>• Power BI & Data Visualization<br><br>Scroll to the Skills section for the complete list!");
+            }, 600);
+        }
+    });
+});

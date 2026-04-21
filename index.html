@@ -17,7 +17,7 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-            <a href="#home" class="logo">MT</a>
+            <a href="#home" class="logo">Mahidhar Tanniru's</a>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -38,8 +38,8 @@
         <div class="container hero-content">
             <div class="hero-text">
                 <div class="hero-badge">Available for Opportunities</div>
-                <h1 className="text-5xl font-bold">
-                    Hi, I'm <span className="gradient-text">Mahidhar Tanniru</span>
+                <h1 class="hero-title">
+                    Hi, I'm <span class="gradient-text">Mahidhar Tanniru</span>
                 </h1>
                 <h2 class="hero-subtitle">Data Engineer | AI Engineer</h2>
                 <p class="hero-description">
@@ -55,10 +55,10 @@
                     </a>
                 </div>
                 <div class="hero-social">
-                    <a href="https://www.linkedin.com/in/mahidhar-tanniru-5a9091141" target="_blank" aria-label="LinkedIn">
+                    <a href="https://www.linkedin.com/in/mahidhar-tanniru-5a9091141/" target="_blank" aria-label="LinkedIn">
                         <i class="fab fa-linkedin"></i>
                     </a>
-                    <a href="https://github.com/Mahidhar-Tanniru" target="_blank" aria-label="GitHub">
+                    <a href="https://github.com/Mahidhartanniru" target="_blank" aria-label="GitHub">
                         <i class="fab fa-github"></i>
                     </a>
                     <a href="mailto:mahidhartanniru66@gmail.com" aria-label="Email">
@@ -561,11 +561,7 @@
                         <span>dbt</span>
                         <span>Data Quality</span>
                     </div>
-                    <!-- <div class="project-links">
-                        <a href="https://github.com/Mahidhar-Tanniru" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i> View Code
-                        </a>
-                    </div> -->
+                    
                 </div>
                 <div class="project-card">
                     <div class="project-icon">
@@ -764,7 +760,7 @@
                         <h3>LinkedIn</h3>
                         <p>Mahidhar Tanniru</p>
                     </a>
-                    <a href="https://github.com/Mahidhar-Tanniru" target="_blank" class="contact-card">
+                    <a href="https://github.com/Mahidhartanniru" target="_blank" class="contact-card">
                         <div class="contact-icon">
                             <i class="fab fa-github"></i>
                         </div>
@@ -792,7 +788,7 @@
                     <a href="https://www.linkedin.com/in/mahidhar-tanniru-5a9091141/" target="_blank">
                         <i class="fab fa-linkedin"></i>
                     </a>
-                    <a href="https://github.com/Mahidhar-Tanniru" target="_blank">
+                    <a href="https://github.com/Mahidhartanniru" target="_blank">
                         <i class="fab fa-github"></i>
                     </a>
                     <a href="mailto:mahidhartanniru66@gmail.com">
@@ -809,6 +805,56 @@
         <div class="floating-shape shape-2"></div>
         <div class="floating-shape shape-3"></div>
     </div>
+
+    <!-- Chatbot Widget -->
+    <div class="chatbot-container" id="chatbot">
+        <div class="chatbot-header">
+            <div class="chatbot-avatar">
+                <i class="fas fa-robot"></i>
+            </div>
+            <div class="chatbot-title">
+                <h4>Portfolio Assistant</h4>
+                <span class="chatbot-status">Online</span>
+            </div>
+            <button class="chatbot-close" id="closeChatbot">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="chatbot-messages" id="chatMessages">
+            <div class="chatbot-message bot">
+                <div class="message-avatar">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="message-content">
+                    <p>Hi! I'm Mahidhar's portfolio assistant. How can I help you today?</p>
+                    <span class="message-time">Just now</span>
+                </div>
+            </div>
+        </div>
+        <div class="chatbot-quick-actions">
+            <button class="quick-action" data-action="resume">
+                <i class="fas fa-file-download"></i> Download Resume
+            </button>
+            <button class="quick-action" data-action="contact">
+                <i class="fas fa-envelope"></i> Contact Info
+            </button>
+            <button class="quick-action" data-action="skills">
+                <i class="fas fa-code"></i> View Skills
+            </button>
+        </div>
+        <div class="chatbot-input">
+            <input type="text" id="chatInput" placeholder="Type your message...">
+            <button id="sendMessage">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Chatbot Toggle Button -->
+    <button class="chatbot-toggle" id="chatbotToggle">
+        <i class="fas fa-comments"></i>
+        <span class="chatbot-badge">1</span>
+    </button>
 
     <script src="script.js"></script>
 </body>
