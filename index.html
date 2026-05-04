@@ -38,7 +38,7 @@
         <div class="container hero-content">
             <div class="hero-text">
                 <div class="hero-badge">Available for Opportunities</div>
-                <h1 class=""text-5xl font-bold"">
+                <h1 class="hero-title">
                     Hi, I'm <span class="gradient-text">Mahidhar Tanniru</span>
                 </h1>
                 <h2 class="hero-subtitle">Data Engineer | AI Engineer</h2>
@@ -87,11 +87,11 @@
             <div class="about-content">
                 <div class="about-text">
                 <p class="about-intro">
-    From pursuing my Master’s at NJIT to building enterprise-scale data solutions in the cloud, my journey as a Data Engineer has been fueled by curiosity, continuous learning, and a passion for solving complex business problems through data. I specialize in transforming raw data into trusted, high-value insights by designing scalable pipelines using PySpark, Azure Databricks, Spark SQL, and Delta Lake.
+    From pursuing my Master's at NJIT to building enterprise-scale data solutions in the cloud, my journey as a Data Engineer has been fueled by curiosity, continuous learning, and a passion for solving complex business problems through data. I specialize in transforming raw data into trusted, high-value insights by designing scalable pipelines using PySpark, Azure Databricks, Spark SQL, and Delta Lake.
 </p>
 
 <p class="about-intro">
-    I have hands-on experience building modern Medallion Architectures, automating ETL workflows, optimizing large-scale data platforms, and delivering analytics solutions that empower teams to make faster, smarter decisions. Working across Azure and AWS environments, I enjoy creating reliable systems where data flows seamlessly from source to insight. To me, every dataset tells a story—and I’m passionate about engineering the pipelines that bring those stories to life and create measurable business impact.
+    I have hands-on experience building modern Medallion Architectures, automating ETL workflows, optimizing large-scale data platforms, and delivering analytics solutions that empower teams to make faster, smarter decisions. Working across Azure and AWS environments, I enjoy creating reliable systems where data flows seamlessly from source to insight. To me, every dataset tells a story—and I'm passionate about engineering the pipelines that bring those stories to life and create measurable business impact.
 </p>
                     <div class="about-points">
                         <div class="about-point">
@@ -208,7 +208,6 @@
                     <div class="skill-tags">
                         <span class="skill-tag">OpenAI</span>
                         <span class="skill-tag">Azure AI</span>
-                        <!-- <span class="skill-tag">Gemini</span> -->
                         <span class="skill-tag">Gen AI</span>
                         <span class="skill-tag">Random Forest</span>
                         <span class="skill-tag">Regression Models</span>
@@ -236,7 +235,6 @@
                         <span class="skill-tag">DataBricks</span>
                         <span class="skill-tag">GitHub</span>
                         <span class="skill-tag">Azure Key Vault</span>
-                        <!-- <span class="skill-tag">Agile</span> -->
                         <span class="skill-tag">Git</span>
                     </div>
                 </div>
@@ -245,278 +243,183 @@
     </section>
 
     <!-- Experience Section -->
-    <!-- <!-- <section id="experience" class="experience"> -->
+    <section id="experience" class="experience">
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">Career Journey</span>
                 <h2 class="section-title">Professional Experience</h2>
             </div>
-            <!-- <div class="timeline">
-                <div class="timeline-item"> -->
-                    <!-- <div class="timeline-marker"></div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <!-- <div class="timeline-header"> -->
-                            <!-- <div>
+                        <div class="timeline-header">
+                            <div>
                                 <h3>Data Engineer</h3>
                                 <h4>Quadrant Technologies</h4>
-                            </div> -->
-                           <!-- / <span class="timeline-date">Oct 2024 - Present</span> -->
-                        <!-- </div> -->
-                        <!-- <ul class="timeline-points">
+                            </div>
+                            <span class="timeline-date">Oct 2024 - Present</span>
+                        </div>
+
+                        <ul class="timeline-points">
                             <li>
                                 <i class="fas fa-rocket"></i>
-                                Designed and implemented end-to-end data pipelines using Azure Databricks and Delta Lake, integrating SAP, shipment,
-                                and supply chain datasets to build consolidated enterprise data models for analytical reporting
+                                Designed and implemented scalable end-to-end data pipelines using Azure Databricks, Delta Lake, and PySpark integrating SAP, shipment, logistics, and supply chain data sources.
                             </li>
+
                             <li>
                                 <i class="fas fa-rocket"></i>
-                                Developed advanced Spark SQL and SQL transformations (CTEs, window functions, multi-level joins, COALESCE handling) -->
-                                <!-- to cleanse, standardize, and enrich material and product data across multiple sources
+                                Built enterprise-grade <strong>Medallion Architecture</strong> (Bronze, Silver, Gold) for raw ingestion, cleansed transformations, and business-ready reporting layers.
                             </li>
+
                             <li>
                                 <i class="fas fa-rocket"></i>
-                                Built and orchestrated parameterized ETL pipelines in Azure Data Factory, automating data ingestion into ADLS Gen2
-                                and implementing a scalable Medallion architecture
+                                Automated raw file ingestion from multiple source systems including SAP, Teradata, OTM, Sharepoint, Fourkites and scheduled feeds into ADLS Gen2 with metadata-driven processing.
                             </li>
+
                             <li>
                                 <i class="fas fa-rocket"></i>
-                                Optimized Delta Lake performance using partitioning, Z-Ordering, VACUUM, and caching strategies, improving
-                                query performance by <strong>30–40%</strong> and reducing storage costs by <strong>15–20%</strong>
+                                Developed reusable PySpark notebooks for schema validation, incremental loads, deduplication, CDC handling, and large-scale file processing workflows.
                             </li>
+
                             <li>
                                 <i class="fas fa-rocket"></i>
-                                Developed curated, analytics-ready datasets and SQL views, improving data accessibility and reducing manual
-                                reporting efforts by <strong>40%</strong> across business teams
+                                Engineered advanced Spark SQL transformations using CTEs, joins, COALESCE logic, aggregations, and window functions for analytics-ready datasets.
                             </li>
+
                             <li>
                                 <i class="fas fa-rocket"></i>
-                                Integrated Databricks with Power BI, enabling incremental refresh, query folding, and automated data pipelines
-                                to support near real-time reporting
+                                Implemented Contract Compliance scorecards and carrier performance dashboards using tender acceptance, shipment commitment, and logistics KPIs.
+                            </li>
+
+                            <li>
+                                <i class="fas fa-rocket"></i>
+                                Developed dynamic reporting solutions for <strong>MTD, YTD</strong> metrics supporting executive operations and supply chain leadership decisions.
+                            </li>
+
+                            <li>
+                                <i class="fas fa-rocket"></i>
+                                Built parameterized ETL workflows in Azure Data Factory integrating Databricks notebooks with scheduling, dependency handling, and automated monitoring.
+                            </li>
+
+                            <li>
+                                <i class="fas fa-rocket"></i>
+                                Optimized Delta Lake tables using partitioning, Z-Ordering, VACUUM, caching, and tuning strategies improving query speed by <strong>40%</strong>.
+                            </li>
+
+                            <li>
+                                <i class="fas fa-rocket"></i>
+                                Reduced storage overhead by <strong>20%</strong> through efficient file compaction, retention policies, and optimized table layouts.
+                            </li>
+
+                            <li>
+                                <i class="fas fa-rocket"></i>
+                                Integrated Databricks with Power BI enabling incremental refresh, self-service dashboards, and near real-time enterprise reporting.
+                            </li>
+
+                            <li>
+                                <i class="fas fa-rocket"></i>
+                                Improved data reliability through reconciliation checks, exception handling, validation frameworks, and ensured <strong>90%+ data consistency</strong>.
                             </li>
                         </ul>
+
                         <div class="tech-stack">
-                            <span>Azure Databricks</span>
+                            <span>Databricks</span>
+                            <span>PySpark</span>
                             <span>Delta Lake</span>
                             <span>Spark SQL</span>
-                            <span>Azure Data Factory</span>
+                            <span>ADF</span>
                             <span>Power BI</span>
-                            <span>SAP Integration</span>
+                            <span>ADLS Gen2</span>
+                            <span>ETL</span>
                         </div>
                     </div>
-                </div> -->
+                </div>
 
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <div class="timeline-header">
                             <div>
-                                <h3>Azure Data Engineer</h3>
-                                <h4>Quadrant Technologies</h4>
+                                <h3>Student Associate</h3>
+                                <h4>New Jersey Institute of Technology</h4>
                             </div>
-                            <span class="timeline-date">Dec 2023 - Jan 2025</span>
+                            <span class="timeline-date">Oct 2023 - Aug 2024</span>
                         </div>
+
                         <ul class="timeline-points">
                             <li>
                                 <i class="fas fa-rocket"></i>
-                                Engineered end-to-end automated data pipelines using Azure Data Factory & Databricks implementing
-                                <strong>Medallion Architecture</strong> (Bronze/Silver/Gold), processing <strong>500GB+ daily</strong>
-                                from ADLS Gen2 with parameterized templates and event-driven triggers
+                                Supported campus operations by coordinating event logistics, facility setup, and cross-functional communication.
                             </li>
+
                             <li>
                                 <i class="fas fa-rocket"></i>
-                                Built reusable PySpark transformation workflows in Delta Lake format for analytics-ready datasets,
-                                supporting agile engineering and continuous delivery initiatives
+                                Resolved setup issues efficiently while maintaining safety compliance and operational standards.
                             </li>
+
                             <li>
                                 <i class="fas fa-rocket"></i>
-                                Configured CI/CD pipelines in Azure DevOps for automated deployment and integrated Azure Key Vault
-                                for secure governance of customer-facing data solutions
+                                Worked collaboratively with university teams to ensure smooth execution of strategic events.
                             </li>
                         </ul>
+
                         <div class="tech-stack">
-                            <span>Azure Data Factory</span>
-                            <span>ADLS Gen2</span>
-                            <span>Azure DevOps</span>
-                            <span>CI/CD</span>
-                            <span>Azure Key Vault</span>
+                            <span>Operations</span>
+                            <span>Teamwork</span>
+                            <span>Coordination</span>
+                            <span>Communication</span>
                         </div>
                     </div>
-                </div> -->
+                </div>
+
                 <div class="timeline-item">
-    <div class="timeline-marker"></div> -->
-
-    <div class="timeline-content">
-        <div class="timeline-header">
-            <div>
-                <h3>Data Engineer</h3>
-                <h4>Quadrant Technologies</h4>
-            </div>
-            <span class="timeline-date">Oct 2024 - Present</span>
-        </div>
-
-        <ul class="timeline-points">
-
-            <li>
-                <i class="fas fa-rocket"></i>
-                Designed and implemented scalable end-to-end data pipelines using Azure Databricks, Delta Lake, and PySpark integrating SAP, shipment, logistics, and supply chain data sources.
-            </li>
-
-            <li>
-                <i class="fas fa-rocket"></i>
-                Built enterprise-grade <strong>Medallion Architecture</strong> (Bronze, Silver, Gold) for raw ingestion, cleansed transformations, and business-ready reporting layers.
-            </li>
-
-            <li>
-                <i class="fas fa-rocket"></i>
-                Automated raw file ingestion from multiple source systems including SAP, Teradata, OTM, Sharepoint, Fourkites and scheduled feeds into ADLS Gen2 with metadata-driven processing.
-            </li>
-
-            <li>
-                <i class="fas fa-rocket"></i>
-                Developed reusable PySpark notebooks for schema validation, incremental loads, deduplication, CDC handling, and large-scale file processing workflows.
-            </li>
-
-            <li>
-                <i class="fas fa-rocket"></i>
-                Engineered advanced Spark SQL transformations using CTEs, joins, COALESCE logic, aggregations, and window functions for analytics-ready datasets.
-            </li>
-
-            <li>
-                <i class="fas fa-rocket"></i>
-                Implemented Contract Compliance scorecards and carrier performance dashboards using tender acceptance, shipment commitment, and logistics KPIs.
-            </li>
-
-            <li>
-                <i class="fas fa-rocket"></i>
-                Developed dynamic reporting solutions for <strong>MTD, YTD</strong> metrics supporting executive operations and supply chain leadership decisions.
-            </li>
-
-            <li>
-                <i class="fas fa-rocket"></i>
-                Built parameterized ETL workflows in Azure Data Factory integrating Databricks notebooks with scheduling, dependency handling, and automated monitoring.
-            </li>
-
-            <li>
-                <i class="fas fa-rocket"></i>
-                Optimized Delta Lake tables using partitioning, Z-Ordering, VACUUM, caching, and tuning strategies improving query speed by <strong>40%</strong>.
-            </li>
-
-            <li>
-                <i class="fas fa-rocket"></i>
-                Reduced storage overhead by <strong>20%</strong> through efficient file compaction, retention policies, and optimized table layouts.
-            </li>
-
-            <li>
-                <i class="fas fa-rocket"></i>
-                Integrated Databricks with Power BI enabling incremental refresh, self-service dashboards, and near real-time enterprise reporting.
-            </li>
-
-            <li>
-                <i class="fas fa-rocket"></i>
-                Improved data reliability through reconciliation checks, exception handling, validation frameworks, and ensured <strong>90%+ data consistency</strong>.
-            </li>
-
-        </ul>
-
-        <div class="tech-stack">
-            <span>Databricks</span>
-            <span>PySpark</span>
-            <span>Delta Lake</span>
-            <span>Spark SQL</span>
-            <span>ADF</span>
-            <span>Power BI</span>
-            <span>ADLS Gen2</span>
-            <!-- <span>Medallion</span> -->
-            <span>ETL</span>
-        </div>
-    </div>
-</div>
-
-                            <!-- NJIT -->
-            <div class="timeline-item">
-                <div class="timeline-marker"></div>
-                <div class="timeline-content">
-                    <div class="timeline-header">
-                        <div>
-                            <h3>Student Associate</h3>
-                            <h4>New Jersey Institute of Technology</h4>
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3>Treasurer</h3>
+                                <h4>Computer Society of India - SRKR Engineering College</h4>
+                            </div>
+                            <span class="timeline-date">Mar 2021 - Jun 2022</span>
                         </div>
-                        <span class="timeline-date">Oct 2023 - Aug 2024</span>
-                    </div>
 
-                    <ul class="timeline-points">
-                        <li>
-                            <i class="fas fa-rocket"></i>
-                            Supported campus operations by coordinating event logistics, facility setup, and cross-functional communication.
-                        </li>
+                        <ul class="timeline-points">
+                            <li>
+                                <i class="fas fa-rocket"></i>
+                                Managed financial planning, budgeting, and fund allocation for student chapter activities and technical events.
+                            </li>
 
-                        <li>
-                            <i class="fas fa-rocket"></i>
-                            Resolved setup issues efficiently while maintaining safety compliance and operational standards.
-                        </li>
+                            <li>
+                                <i class="fas fa-rocket"></i>
+                                Coordinated event logistics and cross-functional teams to execute workshops, seminars, and campus programs successfully.
+                            </li>
 
-                        <li>
-                            <i class="fas fa-rocket"></i>
-                            Worked collaboratively with university teams to ensure smooth execution of strategic events.
-                        </li>
-                    </ul>
+                            <li>
+                                <i class="fas fa-rocket"></i>
+                                Maintained transparent records of transactions, sponsorships, and expenses while improving operational efficiency.
+                            </li>
 
-                    <div class="tech-stack">
-                        <span>Operations</span>
-                        <span>Teamwork</span>
-                        <span>Coordination</span>
-                        <span>Communication</span>
+                            <li>
+                                <i class="fas fa-rocket"></i>
+                                Strengthened leadership, management, and communication skills through active organizational responsibilities.
+                            </li>
+                        </ul>
+
+                        <div class="tech-stack">
+                            <span>Leadership</span>
+                            <span>Finance</span>
+                            <span>Event Management</span>
+                            <span>Teamwork</span>
+                            <span>Communication</span>
+                        </div>
                     </div>
                 </div>
             </div>
-            <!-- SRKR Engineering College -->
-<div class="timeline-item">
-    <div class="timeline-marker"></div>
-    <div class="timeline-content">
-        <div class="timeline-header">
-            <div>
-                <h3>Treasurer</h3>
-                <h4>Computer Society of India - SRKR Engineering College</h4>
-            </div>
-            <span class="timeline-date">Mar 2021 - Jun 2022</span>
         </div>
+    </section>
 
-        <ul class="timeline-points">
-            <li>
-                <i class="fas fa-rocket"></i>
-                Managed financial planning, budgeting, and fund allocation for student chapter activities and technical events.
-            </li>
-
-            <li>
-                <i class="fas fa-rocket"></i>
-                Coordinated event logistics and cross-functional teams to execute workshops, seminars, and campus programs successfully.
-            </li>
-
-            <li>
-                <i class="fas fa-rocket"></i>
-                Maintained transparent records of transactions, sponsorships, and expenses while improving operational efficiency.
-            </li>
-
-            <li>
-                <i class="fas fa-rocket"></i>
-                Strengthened leadership, management, and communication skills through active organizational responsibilities.
-            </li>
-        </ul>
-
-        <div class="tech-stack">
-            <span>Leadership</span>
-            <span>Finance</span>
-            <span>Event Management</span>
-            <span>Teamwork</span>
-            <span>Communication</span>
-        </div>
-    </div>
-    </div>
-    </div>
-    </div>
-</section>
-
-    <!-- Projects Section --> 
+    <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
             <div class="section-header">
@@ -524,7 +427,7 @@
                 <h2 class="section-title">Projects</h2>
             </div>
             <div class="projects-grid">
-                                <div class="project-card">
+                <div class="project-card">
                     <div class="project-icon">
                         <i class="fas fa-cogs"></i>
                     </div>
@@ -543,6 +446,7 @@
                         <span>Azure</span>
                     </div>
                 </div>
+
                 <div class="project-card">
                     <div class="project-icon">
                         <i class="fas fa-database"></i>
@@ -561,8 +465,8 @@
                         <span>dbt</span>
                         <span>Data Quality</span>
                     </div>
-                    
                 </div>
+
                 <div class="project-card">
                     <div class="project-icon">
                         <i class="fas fa-wine-glass"></i>
@@ -588,83 +492,78 @@
                     </div>
                 </div>
 
-                
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-flag-checkered"></i>
+                    </div>
 
+                    <h3>Formula 1 Data Engineering Pipeline</h3>
+                    <p class="project-subtitle">Data Ingestion & Processing</p>
 
-                
-        
-            
-        <div class="project-card">
-    <div class="project-icon">
-        <i class="fas fa-flag-checkered"></i>
-    </div>
+                    <p class="project-description">
+                        Designed and orchestrated an end-to-end Azure data pipeline using Databricks and Azure Data Factory to ingest Formula 1 race data
+                        from Ergast API into ADLS. Built medallion architecture with Raw, Ingested, and Presentation layers using schema enforcement,
+                        audit columns, incremental loads, and Parquet storage for scalable processing.
+                    </p>
 
-    <h3>Formula 1 Data Engineering Pipeline</h3>
-    <p class="project-subtitle">Data Ingestion & Processing</p>
+                    <p class="project-description">
+                        Developed transformation pipelines using PySpark and Delta Lake for driver standings, constructor rankings, dominant teams,
+                        and race analytics. Enabled scheduling, monitoring, alerts, rollback, time travel, and dashboard reporting for business insights.
+                    </p>
 
-    <p class="project-description">
-        Designed and orchestrated an end-to-end Azure data pipeline using Databricks and Azure Data Factory to ingest Formula 1 race data
-        from Ergast API into ADLS. Built medallion architecture with Raw, Ingested, and Presentation layers using schema enforcement,
-        audit columns, incremental loads, and Parquet storage for scalable processing.
-    </p>
+                    <div class="project-tech">
+                        <span>Azure</span>
+                        <span>Databricks</span>
+                        <span>ADF</span>
+                        <span>PySpark</span>
+                        <span>Python</span>
+                        <span>Delta Lake</span>
+                        <span>SQL</span>
+                    </div>
 
-    <p class="project-description">
-        Developed transformation pipelines using PySpark and Delta Lake for driver standings, constructor rankings, dominant teams,
-        and race analytics. Enabled scheduling, monitoring, alerts, rollback, time travel, and dashboard reporting for business insights.
-    </p>
+                    <div class="project-links">
+                        <a href="https://github.com/Mahidhartanniru/F1_Data_Engineering_Project_Azure_medallion_architecture" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> View Code
+                        </a>
+                    </div>
+                </div>
 
-    <div class="project-tech">
-        <span>Azure</span>
-        <span>Databricks</span>
-        <span>ADF</span>
-        <span>PySpark</span>
-        <span>Python</span>
-        <span>Delta Lake</span>
-        <span>SQL</span>
-    </div>
+                <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
 
-    <div class="project-links">
-        <a href="https://github.com/Mahidhartanniru/F1_Data_Engineering_Project_Azure_medallion_architecture" target="_blank" class="project-link">
-            <i class="fab fa-github"></i> View Code
-        </a>
-    </div>
-</div>
-<div class="project-card">
-    <div class="project-icon">
-        <i class="fas fa-video"></i>
-    </div>
+                    <h3>VidSnapAI – AI Reel Generator</h3>
+                    <p class="project-subtitle">Reel Application</p>
 
-    <h3>VidSnapAI – AI Reel Generator</h3>
-    <p class="project-subtitle">Reel Application</p>
+                    <p class="project-description">
+                        Built an AI-powered Flask web application that automatically generates TikTok and Instagram Reel content using
+                        OpenAI for script generation and ElevenLabs for realistic voiceovers, reducing manual video production time by 85%.
+                    </p>
 
-    <p class="project-description">
-        Built an AI-powered Flask web application that automatically generates TikTok and Instagram Reel content using
-        OpenAI for script generation and ElevenLabs for realistic voiceovers, reducing manual video production time by 85%.
-    </p>
+                    <p class="project-description">
+                        Automated end-to-end video editing, subtitle generation, transitions, and rendering workflows using Python and
+                        FFmpeg, delivering polished short-form videos optimized for social media engagement and rapid publishing.
+                    </p>
 
-    <p class="project-description">
-        Automated end-to-end video editing, subtitle generation, transitions, and rendering workflows using Python and
-        FFmpeg, delivering polished short-form videos optimized for social media engagement and rapid publishing.
-    </p>
+                    <div class="project-tech">
+                        <span>Flask</span>
+                        <span>OpenAI</span>
+                        <span>ElevenLabs</span>
+                        <span>Python</span>
+                        <span>FFmpeg</span>
+                        <span>Automation</span>
+                        <span>AI</span>
+                    </div>
 
-    <div class="project-tech">
-        <span>Flask</span>
-        <span>OpenAI</span>
-        <span>ElevenLabs</span>
-        <span>Python</span>
-        <span>FFmpeg</span>
-        <span>Automation</span>
-        <span>AI</span>
-    </div>
-
-    <div class="project-links">
-        <a href="https://github.com/Mahidhartanniru/VID_Reel_Generator_AI" target="_blank" class="project-link">
-            <i class="fab fa-github"></i> View Code
-        </a>
-    </div>
-</div>
-</div>
-</div>
+                    <div class="project-links">
+                        <a href="https://github.com/Mahidhartanniru/VID_Reel_Generator_AI" target="_blank" class="project-link">
+                            <i class="fab fa-github"></i> View Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Education & Certifications -->
